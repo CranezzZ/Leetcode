@@ -30,6 +30,7 @@ class Solution:
         n = len(A)
         A.sort(reverse = True)
         for i in range(n - 2):
+            # 如果紧跟着的两个数的和都没有它大 后面就不用比了
             if A[i] < A[i + 1] + A[i + 2]:
                 return A[i] + A[i + 1] + A[i + 2]
         return 0
